@@ -72,7 +72,7 @@ The stacking ensemble leverages the strengths of each base model to improve pred
 
 ```bash
 git clone
-# Navigate to the src\app folder. 
+# Navigate to the src folder. 
 cd 
 ```
 
