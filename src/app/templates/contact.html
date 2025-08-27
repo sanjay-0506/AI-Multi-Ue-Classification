@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | AI Multi-UE Traffic Analyzer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</head>
+<body>
+  
+<nav>
+  <div class="logo">AI Multi-UE Traffic Analyzer</div>
+  <ul>
+    <li><a href="{{ url_for('index') }}">Dashboard</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- Contact Section -->
+<div class="contact-section">
+  <h1>Connect with Our Team</h1>
+  <p>We’d love to hear from you! Whether it’s feedback, collaboration, or project-related queries, feel free to reach out.</p>
+  <!-- Team Info -->
+  <h2 style="color:cyan; text-align:center; margin-bottom:12px;">Our Team</h2>
+  <div class="team-grid">
+    <div class="team-card">
+        <h3>Sanjaykanth M</h3>
+    </div>
+    <div class="team-card">
+        <h3>Sanjeetha S</h3>
+    </div>
+  </div>
+<br>
+
+  <!-- Contact Info -->
+  <h2 style="color:cyan; text-align:center; margin-top:25px; margin-bottom:12px;">Contact Information</h2>
+  <div class="contact-info">
+    <div><span>Email:</span> <a href="mailto:m.sanjaykanth5@gmail.com">m.sanjaykanth5@gmail.com</a></div>
+    <div><span>Email:</span> <a href="mailto:sanjeesathiyan@gmail.com">sanjeesathiyan@gmail.com</a></div>
+    <div><span>Institution:</span> Kumaraguru College of Technology</div>
+    <div><span>Response Time:</span> Usually within 24 hours</div>
+  </div>
+
+  <!-- Chat-like Project Info -->
+  <h2 style="color:cyan; text-align:center; margin-top:25px; margin-bottom:12px;">Project Info</h2>
+  <div class="chat-panel">
+    <div class="chat-message"><span>AI Analyzer:</span> Tracks live network traffic in real-time.</div>
+    <div class="chat-message"><span>Insight:</span> Detects anomalies like VPN, P2P traffic, and traffic spikes.</div>
+    <div class="chat-message"><span>Use Case:</span> Helps in efficient monitoring of multi-UE environments.</div>
+    <div class="chat-message"><span>Support:</span> Reach out to us for academic or research collaborations.</div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Team AI Multi-UE Traffic Classifier | All Rights Reserved
+</footer>
+</body>
+</html>
+<script>
+  // Navbar hide on scroll
+let prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  document.querySelector("nav").style.top = (prevScrollPos > currentScrollPos) ? "0" : "-80px";
+  prevScrollPos = currentScrollPos;
+}
+
+</script>

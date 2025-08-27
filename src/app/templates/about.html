@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About - AI Multi-UE Traffic Analyzer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">AI Multi-UE Traffic Analyzer</div>
+    <br>
+    <ul id="menu">
+      <li><a href="{{ url_for('index') }}">Dashboard</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <h1>About the AI Multi-UE Traffic Classification Project</h1>
+
+  <div class="content">
+    <div class="section">
+    <h2>Project Overview</h2>
+    <p>
+      The project addresses the problem of classifying application traffic in networks with multiple connected User Equipments (UEs). 
+      By accurately identifying traffic types, the model enables networks to provide tailored Quality of Service (QoS) for each application.
+    </p>
+    <ul>
+      <li>Stacking Ensemble achieves 97.53% accuracy</li>
+      <li>Balanced Accuracy: 97.24%</li>
+      <li>Supports 14 traffic categories (7 standard + 7 VPN variants)</li>
+      <li>Dataset: ~55,000 real network flow samples</li>
+    </ul>
+    <h2>Problem Statement</h2>
+    <p>Applications respond differently under varying network conditions:</p>
+    <ul>
+      <li>Traffic conditions such as congestion and bandwidth fluctuations</li>
+      <li>Channel states including interference and signal quality</li>
+      <li>Coverage scenarios with mobility, indoor/outdoor environments</li>
+    </ul>
+    <p>Misclassification can reduce QoS and negatively impact user experience. The solution provides real-time, accurate traffic classification for all 14 categories.</p>
+
+    <h2>Dataset</h2>
+    <p>
+      The dataset contains approximately 55,000 network flow samples with 33 features (13 original + 20 engineered). 
+      Traffic categories include browsing, chat, file transfer, mail, P2P, streaming, VoIP, and their VPN counterparts.
+    </p>
+
+    <h2>Methodology</h2>
+    <ul>
+      <li>Label encoding and stratified 80-20 train-test split</li>
+      <li>Handling class imbalance with ensemble techniques</li>
+      <li>Feature creation including ratio, log-transformed, and interaction features</li>
+    </ul>
+
+    <h2>Feature Engineering</h2>
+    <ul>
+      <li>Ratio Features: bytes/packet, packets/duration</li>
+      <li>Log Transformations: log(flowBytesPerSecond, duration, flowPktsPerSecond)</li>
+      <li>Interaction Features: min_fiat * mean_fiat, min_biat * total_biat</li>
+      <li>Total Features: 33 (13 original + 20 engineered)</li>
+    </ul>
+
+    <h2>Model Architecture</h2>
+    <p>The Stacking Ensemble consists of two base learners (XGBoost and LightGBM) and a Logistic Regression meta-learner.</p>
+    <p>The meta-learner integrates predictions from the base learners to produce the final traffic classification.</p>
+    <div class="diagram">
+      <img src="{{ url_for('static', filename='model_architecture.png') }}" alt="Stacking Ensemble Model Architecture">
+    </div>
+
+    <h2>Results & Evaluation</h2>
+    <ul>
+      <li>Overall Accuracy: 97.53%</li>
+      <li>Balanced Accuracy: 97.24%</li>
+      <li>Macro F1 Score: 0.97</li>
+      <li>High precision and recall for all traffic types, near-perfect for P2P and VoIP</li>
+    </ul>
+
+    <h2>Technical Implementation</h2>
+    <ul>
+      <li>Languages: Python 3.8+</li>
+      <li>ML Libraries: scikit-learn, XGBoost, LightGBM</li>
+      <li>Data Processing: pandas, numpy</li>
+      <li>Visualization: matplotlib, seaborn</li>
+      <li>Deployment: Flask Web Dashboard</li>
+    </ul>
+
+    <h2>Ethical Considerations</h2>
+    <ul>
+      <li>All traffic data anonymized; no personally identifiable information</li>
+      <li>Focus on flow-level patterns only, not content inspection</li>
+      <li>Class balancing and feature design ensures fairness</li>
+    </ul>
+
+    <h2>Team</h2>
+    <p><b>Sanjaykanth M</b> & <b>Sanjeetha S</b> — Developers of the AI Multi-UE Traffic Analyzer</p>
+  </div>
+  </div>
+
+  <footer>
+    © 2025 Team AI Multi-UE Traffic Classifier | All Rights Reserved
+  </footer>
+</body>
+</html>
+<script>
+  // Navbar hide on scroll
+let prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  document.querySelector("nav").style.top = (prevScrollPos > currentScrollPos) ? "0" : "-80px";
+  prevScrollPos = currentScrollPos;
+}
+
+</script>

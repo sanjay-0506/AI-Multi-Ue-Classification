@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Multi-UE Traffic Analyzer Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <nav>
+  <div class="logo">AI Multi-UE Traffic Analyzer</div>
+  <ul>
+    <li><a href="{{ url_for('index') }}">Dashboard</a></li>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+
+  </ul>
+</nav>
+
+<h1>Real-Time Network Traffic Dashboard</h1>
+<p style="text-align:center;">Real-Time Traffic Monitoring & Classification</p>
+
+<div class="container" id="categories"></div>
+
+<div class="actions">
+  <button onclick="startSimulation()">Start Live Prediction</button>
+  <button onclick="stopSimulation()">Stop Monitoring</button>
+  
+  <!-- Export dropdown -->
+  <div class="dropdown">
+    <button>Export Results▼</button>
+    <div class="dropdown-content">
+      <a href="#" onclick="exportPDF()">📄 Export as PDF</a>
+      <a href="#" onclick="exportCSV()">📊 Export as CSV</a>
+    </div>
+  </div>
+</div>
+
+<div class="main-section">
+  <div class="chart-box">
+    <div class="chart-top"><canvas id="resultsChart"></canvas></div>
+    <div class="info-panel" id="currentInfo">
+      <h3>Prediction Info</h3>
+      <div id="chatContent">No prediction yet.</div>
+    </div>
+  </div>
+  <div class="results" id="resultsBox">
+    <h2>Traffic Classification Report</h2>
+    <table class="results-table" id="resultsTable">
+      <thead>
+        <tr>
+          <th>Row</th><th>Traffic Type</th><th>Confidence</th><th>Remarks</th>
+        </tr>
+      </thead>
+      <tbody><tr><td colspan="4" style="text-align:center;color:#999;">No results yet.</td></tr></tbody>
+    </table>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div>
+
+</body>
+</html>
