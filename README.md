@@ -71,24 +71,24 @@ The stacking ensemble leverages the strengths of each base model to improve pred
 1. Clone the repository
 
 ```bash
-git clone
+git clone <repository_url>
 # Navigate to the src folder. 
-cd 
+cd src
 ```
 
-1. Build the Docker image:
+2. Build the Docker image:
 
 ```bash
 docker build -t multi-ue-traffic-app .
 ```
 
-1. Run the Docker container:
+3. Run the Docker container:
 
 ```bash
 docker run -p 5000:5000 multi-ue-traffic-app
 ```
 
-1. Access the web application in your browser:
+4. Access the web application in your browser:
 
 ```
 http://localhost:5000
@@ -110,19 +110,19 @@ venv\Scripts\activate
 source venv/bin/activate
 ```
 
-1. Install required Python packages:
+2. Install required Python packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-1. Navigate to the `src` folder and run the Flask app:
+3. Navigate to the `src` folder and run the Flask app:
 
 ```bash
 python app.py
 ```
 
-1. Open your browser and access the web application:
+4. Open your browser and access the web application:
 
 ```
 http://localhost:5000
@@ -134,6 +134,9 @@ http://localhost:5000
 
 ### Dashboard
 
+![alt text](src/app/static/Dashboard1.png)
+
+![alt text](src/app/static/Dashboard2.png)
 ---
 
 ## Repository Structure

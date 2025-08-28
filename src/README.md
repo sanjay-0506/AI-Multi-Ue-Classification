@@ -41,6 +41,7 @@ The folder contains the following key components:
 
 ```bash
 git clone <repository_url>
+# Navigate to the src folder
 cd src
 docker build -t multi-ue-traffic-app .
 docker run -p 5000:5000 multi-ue-traffic-app
@@ -50,8 +51,9 @@ docker run -p 5000:5000 multi-ue-traffic-app
 ### Option 2: Local Python Environment
 
 ```bash
-git clone 
-cd src\app
+git clone <repository_url>
+# Navigate to the src folder
+cd src
 python -m venv venv
 # Activate environment:
 # Windows: venv\Scripts\activate
@@ -68,3 +70,7 @@ python app.py
 - Displays **real-time traffic predictions** for multiple UEs
 - Shows **confidence levels** and recommended actions
 - Provides **interactive visualization** for better understanding of network traffic
+
+![alt text](app/static/Dashboard1.png)
+
+![alt text](app/static/Dashboard2.png)
