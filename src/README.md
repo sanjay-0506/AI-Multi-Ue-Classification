@@ -31,7 +31,6 @@ The folder contains the following key components:
 | `static/` | CSS, JS, images |
 | `Dockerfile` | Docker configuration |
 | `requirements.txt` | Python dependencies |
-| `run.sh` | Script to start the app via Docker |
 
 ---
 
@@ -43,8 +42,8 @@ The folder contains the following key components:
 git clone <repository_url>
 # Navigate to the src folder
 cd src
-docker build -t multi-ue-traffic-app .
-docker run -p 5000:5000 multi-ue-traffic-app
+sudo docker build -t multi-ue-traffic-app .
+sudo docker run -p 5000:5000 multi-ue-traffic-app
 # Open: http://localhost:5000
 # After Accessing the web application, Then remove the docker process:
 ```bash
