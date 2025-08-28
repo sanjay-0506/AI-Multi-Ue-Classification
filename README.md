@@ -33,6 +33,7 @@ This repository contains the code and trained models for classifying Multi-UE VP
 - **Samples**: Approximately 55,000
 - **Features**: 13 features capturing flow and network metrics
 - **Classes**: 14 classes including VPN and non-VPN traffic types
+- **Dataset Link**: https://www.unb.ca/cic/datasets/vpn.html
 
 ---
 
@@ -152,7 +153,7 @@ AI-Multi-UE-Traffic-Analyzer/
 │── docs/                        
 │   ├── model_architecture.png     # Model architecture diagram
 │   ├── flow_diagram.png             # Data flow diagram
-│   ├── technical_report.pdf         # Full project report
+│   ├── documentation_report.pdf         # Full project report
 │   └── README.md                    # Documentation for the overall project
 │
 │── src/                           
