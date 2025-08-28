@@ -85,7 +85,7 @@ sudo docker pull sanj7/multi-ue-traffic-app:latest
 3. Run the Docker container:
 
 ```bash
-docker run -d -it -p 5000:5000 multi-ue-traffic-app
+sudo docker run -d -it -p 5000:5000 multi-ue-traffic-app
 ```
 
 4. Access the web application in your browser:
@@ -165,8 +165,7 @@ AI-Multi-UE-Traffic-Analyzer/
 │   ├── templates/                   # HTML templates
 │   ├── static/                      # CSS, JS, images
 │   ├── Dockerfile                   # Docker configuration
-│   ├── requirements.txt             # Python dependencies
-│   ├── run.sh                        # Docker container startup script
+│   ├── requirements.txt             # Python dependencies                      
 │   └── README.md                    # App-specific documentation
 │
 │── LICENSE                          # MIT License
