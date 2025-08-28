@@ -76,22 +76,28 @@ git clone <repository_url>
 cd src
 ```
 
-2. Build the Docker image:
+2. Pull the Docker image:
 
 ```bash
-docker build -t multi-ue-traffic-app .
+sudo docker pull sanj7/multi-ue-traffic-app:latest
 ```
 
 3. Run the Docker container:
 
 ```bash
-docker run -p 5000:5000 multi-ue-traffic-app
+docker run -d -it -p 5000:5000 multi-ue-traffic-app
 ```
 
 4. Access the web application in your browser:
 
 ```
 http://localhost:5000
+```
+5. After Accessing the web application, Then remove the docker process:
+```bash
+sudo docker ps
+sudo docker stop image_name/image_id
+sudo docker rm image_name/image_id
 ```
 
 The included `run.sh` script handles container startup and port mapping automatically.
