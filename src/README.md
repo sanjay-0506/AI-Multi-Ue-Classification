@@ -46,7 +46,13 @@ cd src
 docker build -t multi-ue-traffic-app .
 docker run -p 5000:5000 multi-ue-traffic-app
 # Open: http://localhost:5000
+# After Accessing the web application, Then remove the docker process:
+```bash
+sudo docker ps
+sudo docker stop image_name/image_id
+sudo docker rm image_name/image_id
 ```
+
 
 ### Option 2: Local Python Environment
 
