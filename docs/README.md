@@ -25,6 +25,8 @@
 - Accuracy: 97.5%
 - Balanced Accuracy: 97.24%
 - Detailed classification report and confusion matrix included in `documentation_report.pdf`.
+- This file is a PDF (binary format), so it can't be rendered as a code block. Code blocks only work for text/code files. 
+- If you want to view a PDF or other binary file, you should download and open it with a compatible viewer (like Adobe Reader for PDFs).
 
 ---
 
