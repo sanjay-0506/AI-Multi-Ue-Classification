@@ -42,7 +42,7 @@ The folder contains the following key components:
 git clone <repository_url>
 # Navigate to the src folder
 cd src
-sudo docker build -t multi-ue-traffic-app .
+sudo docker pull sanj7/multi-ue-traffic-app:latest
 sudo docker run -p 5000:5000 multi-ue-traffic-app
 # Open: http://localhost:5000
 # After Accessing the web application, Then remove the docker process:
