@@ -3,12 +3,12 @@
 
 ## Table of Contents
 
-- [Problem Statement]
-- [Project Overview]
-- [Dataset]
-- [Feature Engineering]
-- [Model Architecture]
-- [Usage]
+- Problem Statement
+- Project Overview
+- Dataset
+- Feature Engineering
+- Model Architecture
+- Usage
     - Option 1: Running with Docker
     - Option 2: Running without Docker (Local Python Environment)
 - Repository Structure
