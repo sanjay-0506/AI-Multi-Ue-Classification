@@ -24,7 +24,7 @@
 
 - Accuracy: 97.5%
 - Balanced Accuracy: 97.24%
-- Detailed classification report and confusion matrix included in `technical_report.pdf`.
+- Detailed classification report and confusion matrix included in `documentation_report.pdf`.
 
 ---
 
